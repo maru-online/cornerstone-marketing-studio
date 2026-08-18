@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 250" width="480" height="250">
+  <g id="lockup-primary">
+    <g id="mark" transform="translate(190 0)">
+      <rect id="keystone" x="0" y="62" width="38" height="38" fill="#16233F"></rect>
+      <rect id="wall-vertical" x="0" y="0" width="38" height="56" fill="#16233F"></rect>
+      <rect id="wall-horizontal" x="44" y="62" width="56" height="38" fill="#16233F"></rect>
+    </g>
+    <text id="wordmark" x="240" y="196" text-anchor="middle" font-family="Fraunces, Georgia, serif" font-weight="600" font-size="80" letter-spacing="-1" fill="#16233F">Cornerstone</text>
+    <text id="descriptor" x="240" y="234" text-anchor="middle" font-family="Inter, Helvetica, sans-serif" font-weight="500" font-size="16.5" letter-spacing="6" fill="#16233F">MARKETING STUDIO</text>
+  </g>
+</svg>
