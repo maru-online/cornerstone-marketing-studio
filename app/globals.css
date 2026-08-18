@@ -30,16 +30,14 @@
     --text-3xl: 2.4375rem; /* 39px */
     --text-4xl: 3.0625rem; /* 49px */
 
-    /* Spacing (4px base) — extends Tailwind's default scale with named steps */
-    --spacing-4: 4px;
-    --spacing-8: 8px;
-    --spacing-12: 12px;
-    --spacing-16: 16px;
-    --spacing-24: 24px;
-    --spacing-32: 32px;
-    --spacing-48: 48px;
-    --spacing-64: 64px;
-    --spacing-96: 96px;
+    /* Spacing: intentionally NOT overridden here. Tailwind v4's default
+       --spacing (0.25rem = 4px per unit) already reproduces the brand's
+       4px-base scale exactly at the standard numeric keys — p-1=4px,
+       p-3=12px, p-4=16px, p-6=24px, p-8=32px, p-12=48px, p-16=64px,
+       p-24=96px — so redefining --spacing-N here would hijack those
+       utilities to literal N-px values (4x too small) instead of N-steps.
+       Learned the hard way: an earlier version of this block did exactly
+       that and silently cramped every padding/gap/margin utility sitewide. */
 
     /* Radii */
     --radius-sm: 4px;
@@ -121,8 +119,8 @@
 }
 
 .section {
-    padding-top: clamp(5rem, 7vw, 6.5rem);
-    padding-bottom: clamp(5rem, 7vw, 6.5rem);
+    padding-top: clamp(6rem, 9vw, 8.5rem);
+    padding-bottom: clamp(6rem, 9vw, 8.5rem);
 }
 
 /* =========================
@@ -197,7 +195,7 @@
 @layer components {
     /* Primary button — ink fill, surface text; hover lightens to ochre-deep */
     .btn-primary {
-        @apply inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-medium transition-all duration-200;
+        @apply inline-flex items-center justify-center rounded-full px-8 py-4 text-sm font-medium transition-all duration-200;
         background: var(--color-ink);
         color: var(--color-surface);
         border: 1px solid var(--color-ink);
@@ -210,7 +208,7 @@
 
     /* Outline button — surface fill, ink text/border */
     .btn-outline {
-        @apply inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-medium transition-all duration-200;
+        @apply inline-flex items-center justify-center rounded-full px-8 py-4 text-sm font-medium transition-all duration-200;
         background: var(--color-surface);
         color: var(--color-ink);
         border: 1px solid var(--color-ink);

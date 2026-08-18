@@ -99,7 +99,7 @@ export default function ContactCTALight() {
     return (
         <motion.div {...fadeUp(0.1)}>
             <form
-                className="mt-10 grid gap-6 lg:grid-cols-2"
+                className="mt-0 grid gap-7 lg:grid-cols-2"
                 onSubmit={handleSubmit}
                 noValidate
             >
@@ -116,7 +116,7 @@ export default function ContactCTALight() {
                         value={form.name}
                         onChange={updateField("name")}
                         disabled={status === "submitting"}
-                        className="mt-2 w-full rounded-md border border-border bg-white px-4 py-3 text-sm outline-none transition focus:border-ink disabled:opacity-50"
+                        className="mt-2.5 w-full rounded-md border border-border bg-white px-4 py-3.5 text-sm outline-none transition focus:border-ink disabled:opacity-50"
                         placeholder="Your full name"
                     />
                 </div>
@@ -133,7 +133,7 @@ export default function ContactCTALight() {
                         value={form.company}
                         onChange={updateField("company")}
                         disabled={status === "submitting"}
-                        className="mt-2 w-full rounded-md border border-border bg-white px-4 py-3 text-sm outline-none transition focus:border-ink disabled:opacity-50"
+                        className="mt-2.5 w-full rounded-md border border-border bg-white px-4 py-3.5 text-sm outline-none transition focus:border-ink disabled:opacity-50"
                         placeholder="Your company"
                     />
                 </div>
@@ -151,7 +151,7 @@ export default function ContactCTALight() {
                         value={form.email}
                         onChange={updateField("email")}
                         disabled={status === "submitting"}
-                        className="mt-2 w-full rounded-md border border-border bg-white px-4 py-3 text-sm outline-none transition focus:border-ink disabled:opacity-50"
+                        className="mt-2.5 w-full rounded-md border border-border bg-white px-4 py-3.5 text-sm outline-none transition focus:border-ink disabled:opacity-50"
                         placeholder="you@company.com"
                     />
                 </div>
@@ -168,7 +168,7 @@ export default function ContactCTALight() {
                         value={form.phone}
                         onChange={updateField("phone")}
                         disabled={status === "submitting"}
-                        className="mt-2 w-full rounded-md border border-border bg-white px-4 py-3 text-sm outline-none transition focus:border-ink disabled:opacity-50"
+                        className="mt-2.5 w-full rounded-md border border-border bg-white px-4 py-3.5 text-sm outline-none transition focus:border-ink disabled:opacity-50"
                         placeholder="Optional"
                     />
                 </div>
@@ -183,7 +183,7 @@ export default function ContactCTALight() {
                         value={form.interest}
                         onChange={updateField("interest")}
                         disabled={status === "submitting"}
-                        className="mt-2 w-full rounded-md border border-border bg-white px-4 py-3 text-sm outline-none transition focus:border-ink disabled:opacity-50"
+                        className="mt-2.5 w-full rounded-md border border-border bg-white px-4 py-3.5 text-sm outline-none transition focus:border-ink disabled:opacity-50"
                     >
                         <option value="">Select one</option>
                         {interestOptions.map((option) => (
@@ -206,7 +206,7 @@ export default function ContactCTALight() {
                         value={form.message}
                         onChange={updateField("message")}
                         disabled={status === "submitting"}
-                        className="mt-2 w-full rounded-md border border-border bg-white px-4 py-3 text-sm outline-none transition focus:border-ink disabled:opacity-50"
+                        className="mt-2.5 w-full rounded-md border border-border bg-white px-4 py-3.5 text-sm outline-none transition focus:border-ink disabled:opacity-50"
                         placeholder="Tell us what you're planning"
                     />
                 </div>

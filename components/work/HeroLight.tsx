@@ -14,22 +14,22 @@ export default function HeroLight() {
             {/* Device 1 — Oversized watermark mark (see components/decorative/WatermarkMark.tsx) */}
             <WatermarkMark />
 
-            <div className="mx-auto w-full max-w-5xl px-6 py-20 md:py-0">
+            <div className="mx-auto w-full max-w-6xl px-6 py-28 sm:px-8 md:py-32 lg:px-12">
                 <motion.div className="relative max-w-2xl" {...fadeUp(0)}>
                     <p className="eyebrow">Marketing, Events, Gifting &amp; Signage</p>
 
-                    <h1 className="display text-[2rem] leading-[1.15] tracking-[-0.02em] md:text-[2.5rem] md:leading-[1.12]">
+                    <h1 className="display mt-5 text-[2.25rem] leading-[1.15] tracking-[-0.02em] md:text-[2.75rem] md:leading-[1.1]">
                         One Strategic Partner. One Seamless Brand Experience.
                     </h1>
 
-                    <p className="lead mt-6 max-w-prose text-base leading-relaxed">
+                    <p className="lead mt-7 max-w-prose text-base leading-relaxed md:text-lg">
                         We help businesses execute campaigns, bespoke events, gifting, and
                         signage with confidence. By managing it all under one roof, we
                         simplify delivery, strengthen brand consistency, and drive
                         measurable results.
                     </p>
 
-                    <div className="mt-10 flex flex-col gap-4 sm:flex-row">
+                    <div className="mt-12 flex flex-col gap-4 sm:flex-row sm:items-center">
                         <motion.a
                             href="/contact"
                             className="btn-primary"

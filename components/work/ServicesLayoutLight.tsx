@@ -54,20 +54,20 @@ const services: Service[] = [
 
 export default function ServicesLayoutLight() {
     return (
-        <section id="services" className="section bg-surface py-20">
-            <div className="container mx-auto max-w-5xl px-6">
+        <section id="services" className="section scroll-mt-20 bg-surface">
+            <div className="container mx-auto max-w-6xl px-6 sm:px-8 lg:px-12">
                 <motion.p className="section-label" {...fadeUp(0)}>
                     Services
                 </motion.p>
 
                 <motion.h2
-                    className="max-w-3xl text-4xl leading-tight tracking-[-0.02em] sm:text-[2.65rem]"
+                    className="mt-4 max-w-3xl text-4xl leading-tight tracking-[-0.02em] sm:text-[2.65rem]"
                     {...fadeUp(0.05)}
                 >
                     Four capabilities. One strategic partner.
                 </motion.h2>
 
-                <div className="mt-12 grid gap-8">
+                <div className="mt-16 grid gap-10">
                     {services.map((service, i) =>
                         service.slug === "event-management" ? (
                             <motion.div key={service.slug} {...fadeUp(0.1 + i * 0.05)}>
@@ -82,19 +82,19 @@ export default function ServicesLayoutLight() {
                             <motion.div
                                 key={service.slug}
                                 {...fadeUp(0.1 + i * 0.05)}
-                                className="rounded-lg border border-border bg-white px-8 py-10 sm:px-10"
+                                className="rounded-lg border border-border bg-white px-8 py-12 sm:px-12 sm:py-14"
                             >
                                 <p className="text-sm font-medium text-muted">
                                     {service.audience}
                                 </p>
-                                <h3 className="mt-2 font-heading text-2xl font-semibold text-ink">
+                                <h3 className="mt-3 font-heading text-2xl font-semibold text-ink">
                                     {service.heading}
                                 </h3>
-                                <p className="mt-4 leading-relaxed text-near-black/80">
+                                <p className="mt-5 max-w-2xl leading-relaxed text-near-black/80">
                                     {service.body}
                                 </p>
                                 {service.resultLine && (
-                                    <p className="mt-6 text-sm font-medium text-ochre-deep">
+                                    <p className="mt-7 text-sm font-medium text-ochre-deep">
                                         {service.resultLine}
                                     </p>
                                 )}
