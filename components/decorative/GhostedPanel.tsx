@@ -15,9 +15,15 @@ interface GhostedPanelProps {
  *
  * Ghost fill uses --color-text-on-dark at 8% opacity (not Ink-on-Ink, which
  * would be invisible, and not Ochre, per the brief's "ink/neutral only"
- * rule) — reads as texture, not as content competing with the copy. A
- * radial mask fades its inner edge so it dissolves into the panel rather
- * than reading as a flat block (same treatment as WatermarkMark).
+ * rule) — reads as texture, not as content competing with the copy.
+ *
+ * Sized/positioned so the shape's actual two-walls-meeting-at-a-corner
+ * silhouette stays legible in the corner (bottom-right), with only a small
+ * bleed off the panel edge — the panel's own `overflow-hidden` clips it.
+ * No opacity mask: an earlier centered radial-gradient mask wasn't aligned
+ * to the shape's geometry and washed the corner notch into an unreadable
+ * blob rather than a keystone (same defect fixed in WatermarkMark).
+ *
  * Text is solid `text-on-dark` at full opacity: #F2F0EC on #16233F clears
  * WCAG AA by a wide margin (~13:1) regardless of the ghost layer beneath it.
  */
@@ -31,13 +37,7 @@ export default function GhostedPanel({
         <div className="relative overflow-hidden rounded-lg bg-ink px-8 py-14 sm:px-14 sm:py-20">
             <div
                 aria-hidden="true"
-                className="pointer-events-none absolute -bottom-[20%] -right-[20%] h-[85%] w-[85%] select-none opacity-[0.08]"
-                style={{
-                    maskImage:
-                        "radial-gradient(circle at 60% 40%, black 25%, transparent 70%)",
-                    WebkitMaskImage:
-                        "radial-gradient(circle at 60% 40%, black 25%, transparent 70%)",
-                }}
+                className="pointer-events-none absolute -bottom-[6%] -right-[6%] h-[65%] w-[65%] select-none opacity-[0.08]"
             >
                 <svg viewBox="0 0 100 100" className="h-full w-full" xmlns="http://www.w3.org/2000/svg">
                     <KeystoneGlyph fill="#F2F0EC" />
